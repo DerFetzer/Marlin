@@ -92,14 +92,14 @@
 #define X_DIR_PIN          55
 #define X_ENABLE_PIN       38
 #ifndef X_CS_PIN
-  #define X_CS_PIN         53
+  #define X_CS_PIN         63
 #endif
 
 #define Y_STEP_PIN         60
 #define Y_DIR_PIN          61
 #define Y_ENABLE_PIN       56
 #ifndef Y_CS_PIN
-  #define Y_CS_PIN         49
+  #define Y_CS_PIN         59
 #endif
 
 #define Z_STEP_PIN         46
@@ -113,7 +113,7 @@
 #define E0_DIR_PIN         28
 #define E0_ENABLE_PIN      24
 #ifndef E0_CS_PIN
-  #define E0_CS_PIN        42
+  #define E0_CS_PIN        64
 #endif
 
 #define E1_STEP_PIN        36
@@ -350,9 +350,9 @@
 
     #if ENABLED(CR10_STOCKDISPLAY)
 
-      #define LCD_PINS_RS       27
-      #define LCD_PINS_ENABLE   29
-      #define LCD_PINS_D4       25
+      #define LCD_PINS_RS       16
+      #define LCD_PINS_ENABLE   17
+      #define LCD_PINS_D4       23
 
       #if DISABLED(NEWPANEL)
         #define BEEPER_PIN      37
@@ -414,8 +414,8 @@
       #define BEEPER_PIN        37
 
       #if ENABLED(CR10_STOCKDISPLAY)
-        #define BTN_EN1         17
-        #define BTN_EN2         23
+        #define BTN_EN1         44
+        #define BTN_EN2         42
       #else
         #define BTN_EN1         31
         #define BTN_EN2         33

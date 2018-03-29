@@ -75,8 +75,8 @@
  * THERMAL_PROTECTION_HYSTERESIS and/or THERMAL_PROTECTION_PERIOD
  */
 #if ENABLED(THERMAL_PROTECTION_HOTENDS)
-  #define THERMAL_PROTECTION_PERIOD 40        // Seconds
-  #define THERMAL_PROTECTION_HYSTERESIS 4     // Degrees Celsius
+  #define THERMAL_PROTECTION_PERIOD 60        // Seconds
+  #define THERMAL_PROTECTION_HYSTERESIS 10     // Degrees Celsius
 
   /**
    * Whenever an M104, M109, or M303 increases the target temperature, the
@@ -90,8 +90,8 @@
    * and/or decrease WATCH_TEMP_INCREASE. WATCH_TEMP_INCREASE should not be set
    * below 2.
    */
-  #define WATCH_TEMP_PERIOD 20                // Seconds
-  #define WATCH_TEMP_INCREASE 2               // Degrees Celsius
+  #define WATCH_TEMP_PERIOD 40                // Seconds
+  #define WATCH_TEMP_INCREASE 10               // Degrees Celsius
 #endif
 
 /**
@@ -703,7 +703,7 @@
 #if ENABLED(BABYSTEPPING)
   //#define BABYSTEP_XY              // Also enable X/Y Babystepping. Not supported on DELTA!
   #define BABYSTEP_INVERT_Z false    // Change if Z babysteps should go the other way
-  #define BABYSTEP_MULTIPLICATOR  10 // Babysteps are very small. Increase for faster motion.
+  #define BABYSTEP_MULTIPLICATOR 16   // Babysteps are very small. Increase for faster motion.
   //#define BABYSTEP_ZPROBE_OFFSET   // Enable to combine M851 and Babystepping
   #define DOUBLECLICK_FOR_Z_BABYSTEPPING // Double-click on the Status Screen for Z Babystepping.
   #define DOUBLECLICK_MAX_INTERVAL 1250 // Maximum interval between clicks, in milliseconds.
@@ -1013,15 +1013,15 @@
  * in your `pins_MYBOARD.h` file. (e.g., RAMPS 1.4 uses AUX3 pins `X_CS_PIN 53`, `Y_CS_PIN 49`, etc.).
  * You may also use software SPI if you wish to use general purpose IO pins.
  */
-//#define HAVE_TMC2130
+#define HAVE_TMC2130
 #if ENABLED(HAVE_TMC2130)  // Choose your axes here. This is mandatory!
-  //#define X_IS_TMC2130
+  #define X_IS_TMC2130
   //#define X2_IS_TMC2130
-  //#define Y_IS_TMC2130
+  #define Y_IS_TMC2130
   //#define Y2_IS_TMC2130
-  //#define Z_IS_TMC2130
+  #define Z_IS_TMC2130
   //#define Z2_IS_TMC2130
-  //#define E0_IS_TMC2130
+  #define E0_IS_TMC2130
   //#define E1_IS_TMC2130
   //#define E2_IS_TMC2130
   //#define E3_IS_TMC2130
@@ -1059,10 +1059,10 @@
   #define HOLD_MULTIPLIER    0.5  // Scales down the holding current from run current
   #define INTERPOLATE       true  // Interpolate X/Y/Z_MICROSTEPS to 256
 
-  #define X_CURRENT          800  // rms current in mA. Multiply by 1.41 for peak current.
+  #define X_CURRENT          825  // rms current in mA. Multiply by 1.41 for peak current.
   #define X_MICROSTEPS        16  // 0..256
 
-  #define Y_CURRENT          800
+  #define Y_CURRENT          825
   #define Y_MICROSTEPS        16
 
   #define Z_CURRENT          800
@@ -1119,7 +1119,7 @@
    * M912 - Clear stepper driver overtemperature pre-warn condition flag.
    * M122 S0/1 - Report driver parameters (Requires TMC_DEBUG)
    */
-  //#define MONITOR_DRIVER_STATUS
+  #define MONITOR_DRIVER_STATUS
 
   #if ENABLED(MONITOR_DRIVER_STATUS)
     #define CURRENT_STEP_DOWN     50  // [mA]
@@ -1171,7 +1171,7 @@
    * Enable M122 debugging command for TMC stepper drivers.
    * M122 S0/1 will enable continous reporting.
    */
-  //#define TMC_DEBUG
+  #define TMC_DEBUG
 
   /**
    * M915 Z Axis Calibration

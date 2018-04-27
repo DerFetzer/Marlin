@@ -249,7 +249,6 @@
 #define MSG_DWELL                           _UxGT("休眠 ...")  //"Sleep..."
 #define MSG_USERWAIT                        _UxGT("點擊繼續 ...")  //"Click to resume..."
 #define MSG_PRINT_PAUSED                    _UxGT("列印已暫停") // "Print paused"
-#define MSG_RESUMING                        _UxGT("恢復列印中")  //"Resuming print"
 #define MSG_PRINT_ABORTED                   _UxGT("已取消列印")  //"Print aborted"
 #define MSG_NO_MOVE                         _UxGT("無移動")  //"No move."
 #define MSG_KILLED                          _UxGT("已砍掉")  //"KILLED. "
@@ -290,16 +289,14 @@
 #define MSG_ERR_MINTEMP                     _UxGT("錯誤：最低溫度")  //"Err: MINTEMP"
 #define MSG_ERR_MAXTEMP_BED                 _UxGT("錯誤：最高熱床溫度")  //"Err: MAXTEMP BED"
 #define MSG_ERR_MINTEMP_BED                 _UxGT("錯誤：最低熱床溫度")  //"Err: MINTEMP BED"
-#define MSG_ERR_Z_HOMING                    _UxGT("G28 Z 已禁止") // "G28 Z Forbidden"
+#define MSG_ERR_Z_HOMING                    MSG_HOME _UxGT(" ") MSG_X MSG_Y _UxGT(" ") MSG_FIRST
 #define MSG_HALTED                          _UxGT("印表機停機")  //"PRINTER HALTED"
 #define MSG_PLEASE_RESET                    _UxGT("請重置")  //"Please reset"
 #define MSG_SHORT_DAY                       _UxGT("天")  //"d" // One character only
 #define MSG_SHORT_HOUR                      _UxGT("時")  //"h" // One character only
 #define MSG_SHORT_MINUTE                    _UxGT("分")  //"m" // One character only
 #define MSG_HEATING                         _UxGT("加熱中 ...")  //"Heating..."
-#define MSG_HEATING_COMPLETE                _UxGT("加熱完成")  //"Heating done."
-#define MSG_BED_HEATING                     _UxGT("加熱熱床中")  //"Bed Heating."
-#define MSG_BED_DONE                        _UxGT("完成加熱熱床")  //"Bed done."
+#define MSG_BED_HEATING                     _UxGT("加熱熱床中...")  //"Bed Heating..."
 #define MSG_DELTA_CALIBRATE                 _UxGT("⊿校準")  //"Delta Calibration"
 #define MSG_DELTA_CALIBRATE_X               _UxGT("⊿校準X")  //"Calibrate X"
 #define MSG_DELTA_CALIBRATE_Y               _UxGT("⊿校準Y")  //"Calibrate Y"

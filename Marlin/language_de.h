@@ -171,7 +171,6 @@
 #define MSG_DWELL                           _UxGT("Warten...")
 #define MSG_USERWAIT                        _UxGT("Warte auf Nutzer")
 #define MSG_PRINT_PAUSED                    _UxGT("Druck pausiert")
-#define MSG_RESUMING                        _UxGT("Druckfortsetzung")
 #define MSG_PRINT_ABORTED                   _UxGT("Druck abgebrochen")
 #define MSG_NO_MOVE                         _UxGT("Motoren eingeschaltet")
 #define MSG_KILLED                          _UxGT("ABGEBROCHEN")
@@ -213,16 +212,14 @@
 #define MSG_ERR_MINTEMP                     LCD_STR_THERMOMETER _UxGT(" UNTERSCHRITTEN")
 #define MSG_ERR_MAXTEMP_BED                 _UxGT("BETT ") LCD_STR_THERMOMETER _UxGT(" ÜBERSCHRITTEN")
 #define MSG_ERR_MINTEMP_BED                 _UxGT("BETT ") LCD_STR_THERMOMETER _UxGT(" UNTERSCHRITTEN")
-#define MSG_ERR_Z_HOMING                    _UxGT("G28 Z verboten")
+#define MSG_ERR_Z_HOMING                    MSG_HOME _UxGT(" ") MSG_X MSG_Y _UxGT(" ") MSG_FIRST
 #define MSG_HALTED                          _UxGT("DRUCKER STOPP")
 #define MSG_PLEASE_RESET                    _UxGT("Bitte Resetten")
 #define MSG_SHORT_DAY                       _UxGT("t") // One character only
 #define MSG_SHORT_HOUR                      _UxGT("h") // One character only
 #define MSG_SHORT_MINUTE                    _UxGT("m") // One character only
 #define MSG_HEATING                         _UxGT("Extr. heizt...")
-#define MSG_HEATING_COMPLETE                _UxGT("Extr. aufgeheizt")
 #define MSG_BED_HEATING                     _UxGT("Bett heizt...")
-#define MSG_BED_DONE                        _UxGT("Bett aufgeheizt")
 #define MSG_DELTA_CALIBRATE                 _UxGT("Delta kalibrieren")
 #define MSG_DELTA_CALIBRATE_X               _UxGT("Kalibriere X")
 #define MSG_DELTA_CALIBRATE_Y               _UxGT("Kalibriere Y")
@@ -358,7 +355,7 @@
 #define MSG_FILAMENT_CHANGE_HEADER_LOAD     _UxGT("FILAMENT LADEN")
 #define MSG_FILAMENT_CHANGE_HEADER_UNLOAD   _UxGT("FILAMENT ENTLADEN")
 #define MSG_FILAMENT_CHANGE_OPTION_HEADER   _UxGT("FORTS. OPTIONEN:")
-#define MSG_FILAMENT_CHANGE_OPTION_PURGE    _UxGT("Mehr extrudieren")
+#define MSG_FILAMENT_CHANGE_OPTION_PURGE    _UxGT("Mehr entleeren")
 #define MSG_FILAMENT_CHANGE_OPTION_RESUME   _UxGT("Drucke weiter")
 #define MSG_FILAMENT_CHANGE_NOZZLE          _UxGT("  Düse: ")
 #define MSG_ERR_HOMING_FAILED               _UxGT("Homing gescheitert")
@@ -383,7 +380,7 @@
   #define MSG_FILAMENT_CHANGE_LOAD_2          _UxGT("Laden des")
   #define MSG_FILAMENT_CHANGE_LOAD_3          _UxGT("Filaments")
   #define MSG_FILAMENT_CHANGE_PURGE_1         _UxGT("Warte auf")
-  #define MSG_FILAMENT_CHANGE_PURGE_2         _UxGT("Extrusion des")
+  #define MSG_FILAMENT_CHANGE_PURGE_2         _UxGT("Entleeren des")
   #define MSG_FILAMENT_CHANGE_PURGE_3         _UxGT("Filaments")
   #define MSG_FILAMENT_CHANGE_RESUME_1        _UxGT("Warte auf")
   #define MSG_FILAMENT_CHANGE_RESUME_2        _UxGT("Fortsetzung des")

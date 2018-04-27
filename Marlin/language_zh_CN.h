@@ -249,7 +249,6 @@
 #define MSG_DWELL                           _UxGT("休眠中 ...")  //"Sleep..."
 #define MSG_USERWAIT                        _UxGT("点击继续 ...")  //"Click to resume..."
 #define MSG_PRINT_PAUSED                    _UxGT("暫停打印") // "Print paused"
-#define MSG_RESUMING                        _UxGT("恢复打印中")  //"Resuming print"
 #define MSG_PRINT_ABORTED                   _UxGT("已取消打印")  //"Print aborted"
 #define MSG_NO_MOVE                         _UxGT("无移动")  //"No move."
 #define MSG_KILLED                          _UxGT("已杀掉")  //"KILLED. "
@@ -290,16 +289,14 @@
 #define MSG_ERR_MINTEMP                     _UxGT("错误：最低温度")  //"Err: MINTEMP"
 #define MSG_ERR_MAXTEMP_BED                 _UxGT("错误：最高热床温度")  //"Err: MAXTEMP BED"
 #define MSG_ERR_MINTEMP_BED                 _UxGT("错误：最低热床温度")  //"Err: MINTEMP BED"
-#define MSG_ERR_Z_HOMING                    _UxGT("G28 Z 已禁止") // "G28 Z Forbidden"
+#define MSG_ERR_Z_HOMING                    MSG_HOME _UxGT(" ") MSG_X MSG_Y _UxGT(" ") MSG_FIRST
 #define MSG_HALTED                          _UxGT("打印停机")  //"PRINTER HALTED"
 #define MSG_PLEASE_RESET                    _UxGT("请重置")  //"Please reset"
 #define MSG_SHORT_DAY                       _UxGT("天")  //"d" // One character only
 #define MSG_SHORT_HOUR                      _UxGT("时")  //"h" // One character only
 #define MSG_SHORT_MINUTE                    _UxGT("分")  //"m" // One character only
 #define MSG_HEATING                         _UxGT("加热中 ...")  //"Heating..."
-#define MSG_HEATING_COMPLETE                _UxGT("加热完成")  //"Heating done."
-#define MSG_BED_HEATING                     _UxGT("加热热床中")  //"Bed Heating."
-#define MSG_BED_DONE                        _UxGT("完成加热热床")  //"Bed done."
+#define MSG_BED_HEATING                     _UxGT("加热热床中...")  //"Bed Heating..."
 #define MSG_DELTA_CALIBRATE                 _UxGT("⊿校准")  //"Delta Calibration"
 #define MSG_DELTA_CALIBRATE_X               _UxGT("⊿校准X")  //"Calibrate X"
 #define MSG_DELTA_CALIBRATE_Y               _UxGT("⊿校准Y")  //"Calibrate Y"

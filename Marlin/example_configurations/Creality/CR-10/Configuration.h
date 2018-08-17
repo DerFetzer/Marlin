@@ -373,9 +373,9 @@
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
   // Stock CR-10 tuned for 70C
-  #define DEFAULT_Kp 22.57
-  #define DEFAULT_Ki 1.72
-  #define DEFAULT_Kd 73.96
+  #define DEFAULT_Kp 18.86
+  #define DEFAULT_Ki 1.34
+  #define DEFAULT_Kd 66.45
 
   // Ultimaker
   //#define DEFAULT_Kp 22.2
@@ -553,14 +553,14 @@
 #define X_DRIVER_TYPE  TMC2130
 #define Y_DRIVER_TYPE  TMC2130
 #define Z_DRIVER_TYPE  TMC2130
-#define X2_DRIVER_TYPE TMC2130
-#define Y2_DRIVER_TYPE TMC2130
-#define Z2_DRIVER_TYPE TMC2130
+//#define X2_DRIVER_TYPE TMC2130
+//#define Y2_DRIVER_TYPE TMC2130
+//#define Z2_DRIVER_TYPE TMC2130
 #define E0_DRIVER_TYPE TMC2130
-#define E1_DRIVER_TYPE TMC2130
-#define E2_DRIVER_TYPE TMC2130
-#define E3_DRIVER_TYPE TMC2130
-#define E4_DRIVER_TYPE TMC2130
+//#define E1_DRIVER_TYPE TMC2130
+//#define E2_DRIVER_TYPE TMC2130
+//#define E3_DRIVER_TYPE TMC2130
+//#define E4_DRIVER_TYPE TMC2130
 
 // Enable this feature if all enabled endstop pins are interrupt-capable.
 // This will remove the need to poll the interrupt pins, saving many CPU cycles.
@@ -623,7 +623,7 @@
  * Override with M201
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 1000, 1000, 100, 5000 }
+#define DEFAULT_MAX_ACCELERATION      { 500, 500, 100, 5000 }
 
 /**
  * Default Acceleration (change/s) change = mm/s
@@ -648,7 +648,7 @@
 #define DEFAULT_XJERK                  8.0
 #define DEFAULT_YJERK                  8.0
 #define DEFAULT_ZJERK                  2.7
-#define DEFAULT_EJERK                  5.0
+#define DEFAULT_EJERK                  2.5
 
 /**
  * S-Curve Acceleration
@@ -778,16 +778,16 @@
  */
 #define X_PROBE_OFFSET_FROM_EXTRUDER -45  // X offset: -left  +right  [of the nozzle]
 #define Y_PROBE_OFFSET_FROM_EXTRUDER -10  // Y offset: -front +behind [the nozzle]
-#define Z_PROBE_OFFSET_FROM_EXTRUDER 0   // Z offset: -below +above  [the nozzle]
+#define Z_PROBE_OFFSET_FROM_EXTRUDER -0.62   // Z offset: -below +above  [the nozzle]
 
 // Certain types of probes need to stay away from edges
 #define MIN_PROBE_EDGE 10
 
 // X and Y axis travel speed (mm/m) between probes
-#define XY_PROBE_SPEED 8000
+#define XY_PROBE_SPEED 6000
 
 // Feedrate (mm/m) for the first approach when double-probing (MULTIPLE_PROBING == 2)
-#define Z_PROBE_SPEED_FAST HOMING_FEEDRATE_Z
+#define Z_PROBE_SPEED_FAST HOMING_FEEDRATE_Z * 3
 
 // Feedrate (mm/m) for the "accurate" probe of each point
 #define Z_PROBE_SPEED_SLOW (Z_PROBE_SPEED_FAST / 3)
@@ -1150,7 +1150,7 @@
 
 // Homing speeds (mm/m)
 #define HOMING_FEEDRATE_XY (50*60)
-#define HOMING_FEEDRATE_Z  (12*60)
+#define HOMING_FEEDRATE_Z  (4*60)
 
 // @section calibrate
 

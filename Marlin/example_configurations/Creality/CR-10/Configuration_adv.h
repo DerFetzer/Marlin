@@ -90,7 +90,7 @@
    * and/or decrease WATCH_TEMP_INCREASE. WATCH_TEMP_INCREASE should not be set
    * below 2.
    */
-  #define WATCH_TEMP_PERIOD 20                // Seconds
+  #define WATCH_TEMP_PERIOD 40                // Seconds
   #define WATCH_TEMP_INCREASE 2               // Degrees Celsius
 #endif
 
@@ -104,7 +104,7 @@
   /**
    * As described above, except for the bed (M140/M190/M303).
    */
-  #define WATCH_BED_TEMP_PERIOD 60                // Seconds
+  #define WATCH_BED_TEMP_PERIOD 90                // Seconds
   #define WATCH_BED_TEMP_INCREASE 2               // Degrees Celsius
 #endif
 
@@ -996,7 +996,7 @@
                                                   // Filament Unload does a Retract, Delay, and Purge first:
   #define FILAMENT_UNLOAD_RETRACT_LENGTH      13  // (mm) Unload initial retract length.
   #define FILAMENT_UNLOAD_DELAY             5000  // (ms) Delay for the filament to cool after retract.
-  #define FILAMENT_UNLOAD_PURGE_LENGTH         8  // (mm) An unretract is done, then this length is purged.
+  #define FILAMENT_UNLOAD_PURGE_LENGTH        20  // (mm) An unretract is done, then this length is purged.
 
   #define PAUSE_PARK_NOZZLE_TIMEOUT           60  // (seconds) Time limit before the nozzle is turned off for safety.
   #define FILAMENT_CHANGE_ALERT_BEEPS          6  // Number of alert beeps to play when a response is needed.
@@ -1091,13 +1091,13 @@
   #define HOLD_MULTIPLIER    0.5  // Scales down the holding current from run current
   #define INTERPOLATE       true  // Interpolate X/Y/Z_MICROSTEPS to 256
 
-  #define X_CURRENT          825  // rms current in mA. Multiply by 1.41 for peak current.
+  #define X_CURRENT          850  // rms current in mA. Multiply by 1.41 for peak current.
   #define X_MICROSTEPS        16  // 0..256
 
-  #define Y_CURRENT          825
+  #define Y_CURRENT          850
   #define Y_MICROSTEPS        16
 
-  #define Z_CURRENT          500
+  #define Z_CURRENT          600
   #define Z_MICROSTEPS        16
 
   #define X2_CURRENT         800
@@ -1109,7 +1109,7 @@
   #define Z2_CURRENT         800
   #define Z2_MICROSTEPS       16
 
-  #define E0_CURRENT         700
+  #define E0_CURRENT         600
   #define E0_MICROSTEPS       16
 
   #define E1_CURRENT         800
@@ -1138,7 +1138,7 @@
    * Use Trinamic's ultra quiet stepping mode.
    * When disabled, Marlin will use spreadCycle stepping mode.
    */
-  #define STEALTHCHOP
+  //#define STEALTHCHOP
 
   /**
    * Monitor Trinamic TMC2130 and TMC2208 drivers for error conditions,
@@ -1233,7 +1233,20 @@
    *   stepperY.interpolate(0); \
    * }
    */
-  #define TMC_ADV() {  }
+  #define TMC_ADV() { \
+    stepperX.off_time(3); \
+    stepperX.hysteresis_start(1); \
+    stepperX.hysteresis_end(-1); \
+    stepperY.off_time(3); \
+    stepperY.hysteresis_start(1); \
+    stepperY.hysteresis_end(-1); \
+    stepperZ.off_time(3); \
+    stepperZ.hysteresis_start(2); \
+    stepperZ.hysteresis_end(0); \
+    stepperE0.off_time(3); \
+    stepperE0.hysteresis_start(1); \
+    stepperE0.hysteresis_end(-2); \
+  }
 
 #endif // TMC2130 || TMC2208
 

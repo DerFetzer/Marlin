@@ -360,9 +360,9 @@
 
     #if ENABLED(CR10_STOCKDISPLAY)
 
-      #define LCD_PINS_RS       27
-      #define LCD_PINS_ENABLE   29
-      #define LCD_PINS_D4       25
+      #define LCD_PINS_RS       16
+      #define LCD_PINS_ENABLE   17
+      #define LCD_PINS_D4       23
 
       #if DISABLED(NEWPANEL)
         #define BEEPER_PIN      37
@@ -424,8 +424,8 @@
       #define BEEPER_PIN        37
 
       #if ENABLED(CR10_STOCKDISPLAY)
-        #define BTN_EN1         17
-        #define BTN_EN2         23
+        #define BTN_EN1         44
+        #define BTN_EN2         42
       #else
         #define BTN_EN1         31
         #define BTN_EN2         33

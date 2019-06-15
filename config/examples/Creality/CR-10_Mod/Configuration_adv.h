@@ -1495,7 +1495,7 @@
   #endif
 
   #if AXIS_IS_TMC(E0)
-    #define E0_CURRENT    600
+    #define E0_CURRENT    460
     #define E0_MICROSTEPS  16
     #define E0_RSENSE    0.11
   #endif
@@ -1693,7 +1693,7 @@
     stepperZ.hysteresis_end(0); \
     stepperE0.toff(3); \
     stepperE0.hysteresis_start(1); \
-    stepperE0.hysteresis_end(-1); \
+    stepperE0.hysteresis_end(-2); \
   }
 
 #endif // HAS_TRINAMIC

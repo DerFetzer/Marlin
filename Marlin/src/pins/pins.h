@@ -160,14 +160,18 @@
   #include "pins_RAMPS_ENDER_4.h"     // ATmega2560                                 env:megaatmega2560
 #elif MB(RAMPS_CREALITY)
   #include "pins_RAMPS_CREALITY.h"    // ATmega2560                                 env:megaatmega2560
+#elif MB(RAMPS_DAGOMA)
+  #include "pins_RAMPS_DAGOMA.h"      // ATmega2560                                 env:megaatmega2560
 #elif MB(FYSETC_F6_13)
-  #include "pins_FYSETC_F6_13.h"      // ATmega2560                                 env:megaatmega2560
+  #include "pins_FYSETC_F6_13.h"      // ATmega2560                                 env:fysetc_f6_13
 #elif MB(DUPLICATOR_I3_PLUS)
   #include "pins_DUPLICATOR_I3_PLUS.h" // ATmega2560                                env:megaatmega2560
 #elif MB(VORON)
   #include "pins_VORON.h"             // ATmega2560                                 env:megaatmega2560
 #elif MB(TRONXY_V3_1_0)
   #include "pins_TRONXY_V3_1_0.h"     // ATmega2560                                 env:megaatmega2560
+#elif MB(Z_BOLT_X_SERIES)
+  #include "pins_Z_BOLT_X_SERIES.h"   // ATmega2560                                 env:megaatmega2560
 
 //
 // Other ATmega1280, ATmega2560
@@ -316,6 +320,8 @@
   #include "pins_RAMPS_RE_ARM.h"        // LPC1768                                    env:LPC1768
 #elif MB(MKS_SBASE)
   #include "pins_MKS_SBASE.h"           // LPC1768                                    env:LPC1768
+#elif MB(MKS_SGEN)
+  #include "pins_MKS_SGEN.h"            // LPC1769                                    env:LPC1769
 #elif MB(AZSMZ_MINI)
   #include "pins_AZSMZ_MINI.h"          // LPC1768                                    env:LPC1768
 #elif MB(AZTEEG_X5_GT)
@@ -410,6 +416,8 @@
   #include "pins_STM32F1R.h"          // STM32F1                                    env:STM32F1
 #elif MB(STM3R_MINI)
   #include "pins_STM3R_MINI.h"        // STM32F1                                    env:STM32F1
+#elif MB(BIGTREE_SKR_MINI_V1_1)
+  #include "pins_BIGTREE_SKR_MINI_V1_1.h" // STM32F1                                env:BIGTREE_SKR_MINI
 #elif MB(MALYAN_M200)
   #include "pins_MALYAN_M200.h"       // STM32F1                                    env:malyanm200
 #elif MB(CHITU3D)
@@ -458,7 +466,7 @@
 //
 
 #elif MB(ESP32)
-  #include "pins_ESP32.h"
+  #include "pins_ESP32.h"             // ESP32                                      env:esp32
 
 //
 // Linux Native Debug board
